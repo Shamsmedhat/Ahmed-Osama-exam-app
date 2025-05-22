@@ -15,7 +15,7 @@ const authPages = [
 const publicPages = [...authPages];
 
 const authMiddleware = withAuth(
-    function onSuccess(req) {
+    function onSuccess() {
         return NextResponse.next();
     },
     {
@@ -45,6 +45,7 @@ export default async function middleware(req: NextRequest) {
         return NextResponse.next();
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return (authMiddleware as any)(req);
 }
 

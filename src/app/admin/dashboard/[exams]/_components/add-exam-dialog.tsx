@@ -24,7 +24,7 @@ export default function AddExamDialog({}: AddExamDialogProps) {
     <Dialog open={open} onOpenChange={setOpen}>
       {/* Trigger */}
       <DialogTrigger asChild>
-        <Button className="bg-main text-white rounded-2xl text-lg font-semibold h-12 px-9 hover:bg-blue-500">
+        <Button className="bg-custom-main text-white rounded-2xl text-lg font-semibold h-12 px-9 hover:bg-blue-500">
           Add Quiz
         </Button>
       </DialogTrigger>
@@ -38,9 +38,9 @@ export default function AddExamDialog({}: AddExamDialogProps) {
             onClick={() => setOpen(false)}
             className="w-8 h-8 rounded-full"
           >
-            <ArrowLeft className="w-5 h-5 text-main" />
+            <ArrowLeft className="w-5 h-5 text-custom-main" />
           </Button>
-          <DialogTitle className="text-2xl font-bold text-main">
+          <DialogTitle className="text-2xl font-bold text-custom-main">
             Add Diploma
           </DialogTitle>
           <DialogDescription className="hidden">

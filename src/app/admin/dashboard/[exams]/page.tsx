@@ -41,9 +41,7 @@ export default async function SubjectExamsPage({ params }: { params: { exams: st
               <SearchInput />
               <AddExamDialog />
             </header>
-     
         <ExamList exams={payload.exams} />
-      
     </section>
   );
 }

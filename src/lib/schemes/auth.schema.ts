@@ -1,4 +1,4 @@
-import { date, z } from "zod";
+import { z } from "zod";
 
 export const loginSchema = z.object({
     email: z.string().email().min(1, "please enter your email"),

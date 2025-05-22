@@ -5,6 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(req: NextRequest) {
     // Get SearchParam
     const searchParams = req.nextUrl.searchParams;
+
     // Get Token
     const Jwt = await getToken({ req })
 

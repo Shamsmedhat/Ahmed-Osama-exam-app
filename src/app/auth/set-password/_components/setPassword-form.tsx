@@ -11,7 +11,7 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useSetPasswordSchema, SetPasswordField } from "@/lib/schemes/auth.schemes";
+import { useSetPasswordSchema, SetPasswordField } from "@/lib/schemes/auth.schema";
 import useSetPassword from "../_hooks/use-setPassword";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -55,6 +55,9 @@ export default function SetPasswordForm() {
                                     type="text"
                                 />
                             </FormControl>
+
+                            {/* FeedBack */}
+                            <FormMessage />
                         </FormItem>
                     )}
                 />
@@ -75,6 +78,9 @@ export default function SetPasswordForm() {
                                     type="text"
                                 />
                             </FormControl>
+
+                            {/* FeedBack */}
+                            <FormMessage />
                         </FormItem>
                     )}
                 />
@@ -84,7 +90,7 @@ export default function SetPasswordForm() {
                 {/* Submit */}
                 <Button
                     type="submit"
-                    className="w-full bg-main rounded-2xl py-6"
+                    className="w-full bg-custom-main rounded-2xl py-6"
                     disabled={
                         isPending || (form.formState.isSubmitted && !form.formState.isValid)
                     }

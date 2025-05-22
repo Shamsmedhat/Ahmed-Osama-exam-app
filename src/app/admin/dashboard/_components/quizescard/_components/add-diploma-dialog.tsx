@@ -22,7 +22,7 @@ export default function AddDiplomaDialog({ }: AddDiplomaDialogProps) {
         <Dialog open={open} onOpenChange={setOpen}>
             {/* Trigger */}
             <DialogTrigger asChild>
-                <Button className="bg-main text-white rounded-2xl text-lg font-semibold h-12 px-9 hover:bg-blue-500">
+                <Button className="bg-custom-main text-white rounded-2xl text-lg font-semibold h-12 px-9 hover:bg-blue-500">
                     Add Diploma
                 </Button>
             </DialogTrigger>
@@ -30,7 +30,7 @@ export default function AddDiplomaDialog({ }: AddDiplomaDialogProps) {
             <DialogContent className="max-w-2xl">
                 {/* Header */}
                 <DialogHeader>
-                    <DialogTitle className="text-2xl font-bold text-main">
+                    <DialogTitle className="text-2xl font-bold text-custom-main">
                         Add Diploma
                     </DialogTitle>
                     <DialogDescription className="hidden">

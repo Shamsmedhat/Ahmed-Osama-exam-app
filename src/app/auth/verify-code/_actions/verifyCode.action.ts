@@ -1,8 +1,7 @@
 "use server"
 
 import { JSON_HEADER } from "@/lib/constants/api.constant"
-import { VerifyCodeField } from "@/lib/schemes/auth.schemes"
-import { VerifyPasswordResponse } from "@/lib/types/auth";
+import { VerifyCodeField } from "@/lib/schemes/auth.schema"
 
 export const verifyCodeAction=async(
     verifyCodeField:VerifyCodeField

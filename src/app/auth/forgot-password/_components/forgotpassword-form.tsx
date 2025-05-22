@@ -5,14 +5,13 @@ import { Button } from "@/components/ui/button";
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useForgotPasswordSchema, ForgotPasswordField } from "@/lib/schemes/auth.schemes";
+import { useForgotPasswordSchema, ForgotPasswordField } from "@/lib/schemes/auth.schema";
 import useForgotPassword from "../_hook/use-forgotpassword";
 
 import { useForm } from "react-hook-form";
@@ -55,7 +54,6 @@ export default function ForgotPasswordForm() {
                                     placeholder="Enter Email"
                                     {...field}
                                     type="email"
-                                    
                                 />
                             </FormControl>
                             {/* FeedBack */}
@@ -64,14 +62,14 @@ export default function ForgotPasswordForm() {
                     )}
                 />
 
-                <Link href={'/auth/forgot-password'} className="text-main float-end py-3">Recover Password ?</Link>
+                <Link href={'/auth/forgot-password'} className="text-custom-main float-end py-3">Recover Password ?</Link>
 
                 <SubmitFeedback>{error?.message}</SubmitFeedback>
 
                 {/* Submit */}
                 <Button
                     type="submit"
-                    className="w-full bg-main rounded-2xl py-6"
+                    className="w-full bg-custom-main rounded-2xl py-6"
                     disabled={
                         isPending || (form.formState.isSubmitted && !form.formState.isValid)
                     }

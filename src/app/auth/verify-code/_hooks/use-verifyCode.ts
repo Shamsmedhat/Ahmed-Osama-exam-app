@@ -1,6 +1,4 @@
-"use client";
-
-import { VerifyCodeField } from "@/lib/schemes/auth.schemes";
+import { VerifyCodeField } from "@/lib/schemes/auth.schema";
 import { useMutation } from "@tanstack/react-query";
 import { useSearchParams, useRouter } from "next/navigation";
 import { verifyCodeAction } from "../_actions/verifyCode.action";

@@ -27,7 +27,7 @@ export default function ExamItem({ exam }: { exam: Exam }) {
       <p>{exam.duration} Minutes</p>
 
       {/* Start */}
-      <Button className="bg-main text-white  w-36 rounded-full hover:bg-blue-600 ">Add Question</Button>
+      <Button className="bg-custom-main text-white  w-36 rounded-full hover:bg-blue-600 ">Add Question</Button>
     
     </div>
   </li>

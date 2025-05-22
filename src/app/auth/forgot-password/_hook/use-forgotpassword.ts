@@ -1,4 +1,4 @@
-import { ForgotPasswordField } from "@/lib/schemes/auth.schemes";
+import { ForgotPasswordField } from "@/lib/schemes/auth.schema";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter, useSearchParams } from "next/navigation";
 import { forgotPAsswordAction } from "../_actions/forgotpassword.action";

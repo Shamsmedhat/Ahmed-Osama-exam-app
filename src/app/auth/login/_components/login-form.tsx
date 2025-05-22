@@ -2,7 +2,7 @@
 
 import { SubmitHandler, useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { LoginFields, loginSchema } from "@/lib/schemes/auth.schemes"
+import { LoginFields, loginSchema } from "@/lib/schemes/auth.schema"
 import {
     Form,
     FormControl,
@@ -14,14 +14,10 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
-import { useState } from "react"
 import useLogin from "../_hooks/use-login"
 
 
 export default function LoginForm() {
-    // State
-    const [error, setError] = useState<string | null>(null);
-
     // Hooks
     const { isPending, error: loginError, login } = useLogin();
 
@@ -73,19 +69,19 @@ export default function LoginForm() {
                 />
 
                 {/* handle error */}
-                {(error || loginError) && (
-                    <p className="text-red-500 text-sm">{error || loginError?.message}</p>
+                {loginError && (
+                  <p className="text-red-500 text-sm">{loginError.message}</p>
                 )}
 
                 {/* Recover */}
-                <Link className="text-base text-end block text-main" href={'/auth/forgot-password'}>
+                <Link className="text-base text-end block text-custom-main" href={'/auth/forgot-password'}>
                     Recover Password ?
                 </Link>
 
                 <Button
                     disabled={isPending || (form.formState.isSubmitted && !form.formState.isValid)}
                     type="submit"
-                    className="w-full bg-main rounded-2xl py-6"
+                    className="w-full bg-custom-main rounded-2xl py-6"
                 >
                     Sign in
                 </Button>

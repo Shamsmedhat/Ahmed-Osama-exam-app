@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { History, LogOut, LayoutPanelLeft } from "lucide-react";
+import { LogOut, LayoutPanelLeft } from "lucide-react";
 import Image from "next/image";
 import { signOut } from "next-auth/react";
 import Logo from "../../../../public/assets/images/Final Logo 1.png";
@@ -28,7 +28,7 @@ export default function AdminSidebar() {
     };
 
     return (
-        <div className="fixed top-0 left-0 bottom-0   z-50 px-5 pt-5">
+        <div className="fixed top-0 left-0 bottom-0 z-50 px-5 pt-5">
             <div className="flex justify-center mb-5 py-3">
                 <Image src={Logo} alt="Elevate Logo" priority width={120} height={40} />
             </div>
@@ -45,7 +45,7 @@ export default function AdminSidebar() {
                                     onClick={handleLogout}
                                     className="flex items-center gap-2 w-full text-xl py-2 px-8 rounded-lg bg-transparent text-[#696F79]"
                                 >
-                                    <item.icon className="text-main" />
+                                    <item.icon className="text-custom-main" />
                                     <span>{item.title}</span>
                                 </button>
                             ) : (
@@ -53,11 +53,11 @@ export default function AdminSidebar() {
                                 <Link
                                     href={item.url}
                                     className={`flex items-center gap-2 w-full text-xl py-2 px-8 rounded-lg transition-colors ${isActive
-                                            ? "bg-main text-white font-bold"
+                                            ? "bg-custom-main text-white font-bold"
                                             : "bg-transparent text-[#696F79] "
                                         }`}
                                 >
-                                    <item.icon className={isActive ? "text-white" : "text-main"} />
+                                    <item.icon className={isActive ? "text-white" : "text-custom-main"} />
                                     <span className={isActive ? "font-bold" : ""}>
                                         {item.title}
                                     </span>

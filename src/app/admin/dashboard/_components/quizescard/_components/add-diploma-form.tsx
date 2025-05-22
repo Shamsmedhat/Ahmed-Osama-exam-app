@@ -129,13 +129,13 @@ export default function AddDiplomaForm({ onClose }: AddDiplomaFormProps) {
                         type="button"
                         variant="outline"
                         onClick={onClose}
-                        className="w-40 h-10 rounded-2xl border-main text-main font-bold hover:bg-gray-100 hover:text-main"
+                        className="w-40 h-10 rounded-2xl border-custom-main text-custom-main font-bold hover:bg-gray-100 hover:text-custom-main"
                     >
                         Back
                     </Button>
                     <Button
                         type="submit"
-                        className="w-40 h-10 rounded-2xl bg-main text-white font-bold hover:bg-blue-500"
+                        className="w-40 h-10 rounded-2xl bg-custom-main text-white font-bold hover:bg-blue-500"
                     >
                         ADD
                     </Button>

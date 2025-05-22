@@ -1,6 +1,6 @@
 'use client'
 
-import { RegistrationFields } from "@/lib/schemes/auth.schemes";
+import { RegistrationFields } from "@/lib/schemes/auth.schema";
 import { useMutation } from "@tanstack/react-query";
 import { useSearchParams } from "next/navigation";
 import { registerAction } from "../_actions/register.action";

@@ -1,4 +1,3 @@
-import SearchInput from "@/components/common/search-input";
 import AdminSidebar from "@/components/layout/admin-sidebar";
 
 export default function UserPagesLayout({

@@ -1,16 +1,32 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaTwitter, FaFacebook, FaApple } from "react-icons/fa";
-import { signIn } from "next-auth/react";
-// import { Button } from "@/components/ui/button";
-
-
-// onClick={()=>{
-//     signIn("google",{
-//         callbackUrl:"http://localhost:3000/dashboard"
-//     })
-// }}
+import { cn } from "@/lib/utils";
 
 export default function AuthenticationIcons() {
+
+  const ICONS = [
+        {
+            icon: <FcGoogle size={24} />,
+            name: "Google",
+            color: "text-red-500",
+        },
+        {
+            icon: <FaTwitter size={24} />,
+            name: "Twitter",
+            color: "text-blue-500",
+        },
+        {
+            icon: <FaFacebook size={24} />,
+            name: "Facebook",
+            color: "text-blue-600",
+        },
+        {
+            icon: <FaApple size={24} />,
+            name: "Apple",
+            color: "text-black",
+        },
+  ]
+  
     return (
         <div className="flex flex-col items-center justify-center  mt-9">
             {/* "Or Continue with" */}
@@ -23,25 +39,11 @@ export default function AuthenticationIcons() {
 
             {/* Icons */}
             <div className="flex space-x-8 mt-8">
-                {/* Google */}
-                <button className="p-3 rounded-lg border border-gray-300 hover:bg-gray-100 transition">
-                    <FcGoogle size={24} />
-                </button>
-
-                {/* Twitter */}
-                <button className="p-3 rounded-lg border border-gray-300 hover:bg-gray-100 transition">
-                    <FaTwitter size={24} className="text-blue-500" />
-                </button>
-
-                {/* Facebook */}
-                <button className="p-3 rounded-lg border border-gray-300 hover:bg-gray-100 transition">
-                    <FaFacebook size={24} className="text-blue-600" />
-                </button>
-
-                {/* Apple */}
-                <button className="p-3 rounded-lg border border-gray-300 hover:bg-gray-100 transition">
-                    <FaApple size={24} className="text-black" />
-                </button>
+                {ICONS.map((icon, index) => (
+                    <button key={index} className={cn( icon.color ,"p-3 rounded-lg border border-gray-300 hover:bg-gray-100 transition")}>
+                        {icon.icon}
+                    </button>
+                ))}
             </div>
         </div>
     );

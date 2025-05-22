@@ -1,6 +1,6 @@
 "use client"
 
-import { SetPasswordField } from "@/lib/schemes/auth.schemes"
+import { SetPasswordField } from "@/lib/schemes/auth.schema"
 import { useMutation } from "@tanstack/react-query"
 import { useRouter, useSearchParams } from "next/navigation"
 import { SetPasswordAction } from "../_action/setPassword.action"

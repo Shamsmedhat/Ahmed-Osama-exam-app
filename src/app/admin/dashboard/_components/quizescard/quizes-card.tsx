@@ -1,7 +1,6 @@
 import {
   Card,
   CardContent,
-  CardHeader,
 } from "@/components/ui/card";
 import { decode } from "next-auth/jwt";
 import { cookies } from "next/headers";

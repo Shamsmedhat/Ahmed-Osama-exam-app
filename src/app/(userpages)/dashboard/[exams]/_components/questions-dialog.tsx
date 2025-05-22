@@ -22,7 +22,7 @@ export default function QuestionsDialog({ exam }: QuestionDialogProps) {
     <Dialog>
       {/* Trigger */}
       <DialogTrigger asChild>
-        <Button className="bg-main h-7 rounded-full">Start</Button>
+        <Button className="bg-custom-main h-7 rounded-full">Start</Button>
       </DialogTrigger>
       
       <DialogContent className=" max-w-xl">

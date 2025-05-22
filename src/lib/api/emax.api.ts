@@ -8,5 +8,6 @@ export async function getExams(subjectId: string) {
     });
 
     const payload: ApiResponse<PaginatedResponse<{ exams: Exam[] }>> = await response.json();
+
     return payload;
 }

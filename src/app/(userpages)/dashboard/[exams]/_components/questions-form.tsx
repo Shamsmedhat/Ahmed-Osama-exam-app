@@ -130,14 +130,14 @@ export default function QuestionsForm({ onClose, examId }: QuestionsFormProps) {
                                 const lastAnswer = form.getValues(`answers.${(payload?.questions?.length ?? 0) - 1}`);
                                 setAnswer(lastAnswer?.correct || "");
                             }}
-                            className="border bg-white text-main border-main py-4 w-60 text-base font-semibold rounded-full hover:bg-gray-100"
+                            className="border bg-white text-custom-main border-custom-main py-4 w-60 text-base font-semibold rounded-full hover:bg-gray-100"
                         >
                             Back
                         </Button>
 
                         {/* Show Results Button */}
                         <Button
-                            className="border bg-main text-white border-main py-4 w-60 text-base font-semibold rounded-full hover:bg-blue-700"
+                            className="border bg-custom-main text-white border-custom-main py-4 w-60 text-base font-semibold rounded-full hover:bg-blue-700"
                             onClick={() => {
                                 if (onClose) onClose();
                             }}
@@ -169,7 +169,7 @@ export default function QuestionsForm({ onClose, examId }: QuestionsFormProps) {
                                 key={i}
                                 className={cn(
                                     "size-2 bg-gray-400 rounded-full transition-colors",
-                                    step >= i && "bg-main"
+                                    step >= i && "bg-custom-main"
                                 )}
                             />
                         ))}
@@ -206,7 +206,7 @@ export default function QuestionsForm({ onClose, examId }: QuestionsFormProps) {
                                                         className="flex items-center  bg-gray-100  px-4 rounded-md space-x-3 space-y-0 "
                                                     >
                                                         <FormControl>
-                                                            <RadioGroupItem value={answer.key} className=" border-main border-2 " />
+                                                            <RadioGroupItem value={answer.key} className=" border-custom-main border-2 " />
                                                         </FormControl>
                                                         <FormLabel className=" grow py-3 text-lg ">
                                                             {answer.answer}
@@ -234,7 +234,7 @@ export default function QuestionsForm({ onClose, examId }: QuestionsFormProps) {
                                         }
                                         setStep((prev) => prev - 1);
                                     }}
-                                    className="text-main  border-2 border-main py-5 rounded-full bg-white hover:bg-white "
+                                    className="text-custom-main  border-2 border-custom-main py-5 rounded-full bg-white hover:bg-white "
                                 >
                                     Back
                                 </Button>
@@ -252,7 +252,7 @@ export default function QuestionsForm({ onClose, examId }: QuestionsFormProps) {
                                         }
                                         setStep((prev) => prev + 1);
                                     }}
-                                    className="text-white py-5 border-2 border-main rounded-full bg-main hover:bg-main "
+                                    className="text-white py-5 border-2 border-custom-main rounded-full bg-custom-main hover:bg-custom-main "
                                 >
                                     Next
                                 </Button>

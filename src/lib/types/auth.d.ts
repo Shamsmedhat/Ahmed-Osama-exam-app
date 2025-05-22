@@ -9,24 +9,24 @@ declare type ApplicationUser={
     isVerified: boolean,
 }
 
-export declare type LoginResponse={
+declare type LoginResponse={
     token:string;
     user:ApplicationUser;
 }
 
-export declare type RegistrationResponse={
+declare type RegistrationResponse={
     token:string,
     user:ApplicationUser,
 }
 
-export declare type ForgotPasswordResponse={
+declare type ForgotPasswordResponse={
     info:string,
 }
 
-export declare type VerifyPasswordResponse={
+declare type VerifyPasswordResponse={
     status:string,
 }
 
-export declare type SetPasswordResponse={
+declare type SetPasswordResponse={
     token:string,
 }

@@ -1,8 +1,8 @@
 "use server";
 
-import { RegistrationFields } from "@/lib/schemes/auth.schemes";
+import { RegistrationFields } from "@/lib/schemes/auth.schema";
 import { JSON_HEADER } from "@/lib/constants/api.constant";
-import { RegistrationResponse } from "@/lib/types/auth";
+
 export const registerAction = async (registrationField: RegistrationFields) => {
     const response = await fetch(`${process.env.API}/auth/signup`, {
         method: "POST",

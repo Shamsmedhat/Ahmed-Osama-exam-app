@@ -5,14 +5,13 @@ import { Button } from "@/components/ui/button"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
     FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { registrationSchema, RegistrationFields } from "@/lib/schemes/auth.schemes"
+import { registrationSchema, RegistrationFields } from "@/lib/schemes/auth.schema"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import useRegister from "../_hook/use-register"
@@ -20,7 +19,6 @@ import Link from "next/link"
 
 
 export default function RegisterForm() {
-
     //Hook
     const { isPending, error, register } = useRegister();
 
@@ -200,16 +198,14 @@ export default function RegisterForm() {
                     )}
                 />
 
-                <p>Already have an account? <span className="text-main"><Link href={"/auth/login"}>Login</Link></span></p>
-
-                {/* {error && <p className="text-red-500">{error.message}</p>} */}
+                <p>Already have an account? <span className="text-custom-main"><Link href={"/auth/login"}>Login</Link></span></p>
 
                 <SubmitFeedback>{error?.message}</SubmitFeedback>
 
                 {/* Submit */}
                 <Button
                     type="submit"
-                    className="w-full bg-main rounded-2xl py-6"
+                    className="w-full bg-custom-main rounded-2xl py-6"
                     disabled={
                         isPending || (form.formState.isSubmitted && !form.formState.isValid)
                     }

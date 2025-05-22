@@ -1,8 +1,7 @@
 "use server"
-import { JSON_HEADER } from "@/lib/constants/api.constant";
-import { SetPasswordField } from "@/lib/schemes/auth.schemes";
-import { SetPasswordResponse } from "@/lib/types/auth";
 
+import { JSON_HEADER } from "@/lib/constants/api.constant";
+import { SetPasswordField } from "@/lib/schemes/auth.schema";
 
 export const SetPasswordAction=async(
     setPasswordField:SetPasswordField
@@ -16,4 +15,6 @@ export const SetPasswordAction=async(
     });
 
     const payload:ApiResponse<SetPasswordResponse> =await response.json()
+
+    return payload;
 }

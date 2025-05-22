@@ -1,8 +1,7 @@
 "use server"
 
 import { JSON_HEADER } from "@/lib/constants/api.constant"
-import { ForgotPasswordField } from "@/lib/schemes/auth.schemes"
-import { ForgotPasswordResponse } from "@/lib/types/auth";
+import { ForgotPasswordField } from "@/lib/schemes/auth.schema"
 
 export const forgotPAsswordAction=async(
     forgotPasswordField:ForgotPasswordField

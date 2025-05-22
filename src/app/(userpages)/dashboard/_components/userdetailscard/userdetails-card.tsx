@@ -22,11 +22,11 @@ export default function UserCard({ username }: UserCardProps) {
 
                 {/* Info Section */}
                 <div className="flex-1 max-w-2xl">
-                    <h2 className="text-2xl font-bold text-main pb-4">{username}</h2>
+                    <h2 className="text-2xl font-bold text-custom-main pb-4">{username}</h2>
                     <p className="text-gray-400 text-sm mb-2">Voluptatem aut</p>
 
                     {/* Progress Bar */}
-                    <Progress value={70} className="h-3 bg-gray-100 [&>div]:bg-main my-6 w-auto max-w-xl" /> {/* Increased max-w from lg to xl, reduced my from 10 to 6 */}
+                    <Progress value={70} className="h-3 bg-gray-100 [&>div]:bg-custom-main my-6 w-auto max-w-xl" /> {/* Increased max-w from lg to xl, reduced my from 10 to 6 */}
 
                     {/* Stats */}
                     <div className="flex gap-x-6 mt-4 text-left">

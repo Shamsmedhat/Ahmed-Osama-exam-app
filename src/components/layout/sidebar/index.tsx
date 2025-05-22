@@ -50,7 +50,7 @@ export default function AppSidebar() {
                   onClick={handleLogout}
                   className="flex items-center gap-2 w-full text-xl py-2 px-8 rounded-lg bg-transparent text-[#696F79]"
                 >
-                  <item.icon className="text-main" />
+                  <item.icon className="text-custom-main" />
                   <span>{item.title}</span>
                 </button>
               ) : (
@@ -59,11 +59,11 @@ export default function AppSidebar() {
                   href={item.url}
                   className={`flex items-center gap-2 w-full text-xl py-2 px-8 rounded-lg transition-colors ${
                     isActive
-                      ? "bg-main text-white font-bold"
+                      ? "bg-custom-main text-white font-bold"
                       : "bg-transparent text-[#696F79] "
                   }`}
                 >
-                  <item.icon className={isActive ? "text-white" : "text-main"} />
+                  <item.icon className={isActive ? "text-white" : "text-custom-main"} />
                   <span className={isActive ? "font-bold" : ""}>
                     {item.title}
                   </span>

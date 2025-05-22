@@ -8,5 +8,6 @@ export async function getQuestions(searchParams: string) {
         },
     });
     const payload: ApiResponse<PaginatedResponse<{ questions: Questions[] }>> = await response.json();
+
     return payload;
 }

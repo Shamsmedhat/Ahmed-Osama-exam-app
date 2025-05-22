@@ -18,10 +18,10 @@ export default function QuizesGrid({ subjects }: QuizesGridProps) {
   return (
     <section >
      <div className="flex items-center justify-between  py-2">
-        <h3 className="text-main font-medium text-xl">Quizes</h3>
+        <h3 className="text-custom-main font-medium text-xl">Quizes</h3>
         <button
           onClick={() => setShowAll(!showAll)}
-          className="text-main font-medium text-2xl "
+          className="text-custom-main font-medium text-2xl "
         >
           {showAll ? 'Show less' : 'View all'}
         </button>

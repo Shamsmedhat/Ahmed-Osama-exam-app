@@ -5,29 +5,28 @@ import { Button } from "@/components/ui/button";
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useVerifyPasswordCodeSchema, VerifyCodeField } from "@/lib/schemes/auth.schemes";
+import { useVerifyPasswordCodeSchema, VerifyCodeField } from "@/lib/schemes/auth.schema";
 import useVerifyPasswordCode from "../_hooks/use-verifyCode";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function VerifyCodeForm() {
-    //hooks
+    // Hooks
     const verifyCadeSchema = useVerifyPasswordCodeSchema();
     const { isPending, error, verifyCode } = useVerifyPasswordCode()
 
-    //Functions
+    // Functions
     function onSubmit(values: VerifyCodeField) {
         verifyCode(values)
     }
 
-    //From
+    // From
     const form = useForm<VerifyCodeField>({
         resolver: zodResolver(verifyCadeSchema),
         defaultValues: {
@@ -65,7 +64,7 @@ export default function VerifyCodeForm() {
                 {/* Submit */}
                 <Button
                     type="submit"
-                    className="w-full bg-main rounded-2xl py-6"
+                    className="w-full bg-custom-main rounded-2xl py-6"
                     disabled={
                         isPending || (form.formState.isSubmitted && !form.formState.isValid)
                     }

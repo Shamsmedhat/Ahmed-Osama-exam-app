@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export default function SearchInput() {
     return (
         <div className="relative w-full max-w-3xl ">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-main" size={20} />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-custom-main" size={20} />
             <Input
                 type="text"
                 placeholder="Search Quiz"

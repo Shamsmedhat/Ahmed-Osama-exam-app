@@ -11,4 +11,4 @@ declare type Questions = {
     "correct": string,
     "subject": Subject,
     "exam": Exam
-}&DatabaseProperties
+} & DatabaseProperties

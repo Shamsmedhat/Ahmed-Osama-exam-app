@@ -1,5 +1,5 @@
-import { useRouter, useSearchParams } from "next/navigation";
-import { LoginFields } from "@/lib/schemes/auth.schemes";
+import { useSearchParams } from "next/navigation";
+import { LoginFields } from "@/lib/schemes/auth.schema";
 import { useMutation } from "@tanstack/react-query";
 import { signIn } from "next-auth/react";
 import { AuthenticationError } from "@/lib/utils/app-errors";
